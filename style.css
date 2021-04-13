@@ -1,0 +1,55 @@
+body {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f3/Blank_World_Map_Slate.svg");
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.quiz-container {
+    margin: auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 27em;
+    width: 27em;
+    perspective: 1000px;
+}
+
+.card {
+    width: 7em;
+    height: 7em;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #4b4bc6;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #1c1a1a;
+    position: absolute;
+}
+.front {
+    background: linear-gradient(255deg, #08aeea, #2af598);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.back {
+    background: linear-gradient(#f8da61, #ff5acd);
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+.card:hover {
+    transform: rotateY(180deg);
+}
